@@ -19,6 +19,7 @@ set sw=2
 set guifont=monaco
 set guioptions-=m
 set guioptions-=T
+set spelllang=pt_br
 
 ab rdb require 'ruby-debug';debugger
 
@@ -32,6 +33,7 @@ nmap <silent> <F6> :set lines=999 columns=999<Enter>
 nmap Ç :
 cmap <C-e> <C-r>=expand('%:p:h')<CR>/
 nmap <silent> <F7> :%s/\(<\/[^>]*>\)/\1\r/g<Enter>
+nmap <silent> <F8> :set wrap spell<Enter>
 
 augroup filetypedetect
   autocmd BufRead,BufNewFile *.prawn set filetype=ruby
