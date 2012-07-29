@@ -4,11 +4,9 @@ source ~/.vim/vimrc
 
 if $COLORTERM == 'gnome-terminal'
   set term=gnome-256color
-  colorscheme railscasts
-else
-  colorscheme desert
 endif
 
+colorscheme railscasts
 set mouse=a
 set ttymouse=xterm2
 
@@ -16,7 +14,7 @@ set nowrap
 set nu
 set sts=2
 set sw=2
-set guifont=monaco
+set guifont=monaco:h12
 set guioptions-=m
 set guioptions-=T
 set spelllang=pt_br
