@@ -2,15 +2,14 @@
 " http://github.com/akitaonrails/vimfiles
 source ~/.vim/vimrc
 
-if $COLORTERM == 'gnome-terminal'
-  set term=gnome-256color
-endif
+set term=gnome-256color
+colorscheme railscasts
 
 colorscheme railscasts
 set mouse=a
 set ttymouse=xterm2
 
-set nowrap
+"set nowrap
 set nu
 set sts=2
 set sw=2
@@ -18,16 +17,17 @@ set guifont=monaco:h12
 set guioptions-=m
 set guioptions-=T
 set spelllang=pt_br
-
+set runtimepath^=~/.vim/bundle/ctrlp.vim
 ab rdb require 'ruby-debug';debugger
 
-nmap <silent> <C-t> :CommandT<Enter>
+"nmap <silent> <C-t> :CommandT<Enter>
+nmap <silent> <C-t> :CtrlP<Enter>
 nmap <C-h> i$<Esc>f(r f)xF$x
 nmap <silent> <F2> :BufExplorer<Enter>
 nmap <silent> <F3> :noh<Enter>
 nmap <silent> <F4> gg=G''
 nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
-nmap <silent> <F6> :set lines=999 columns=999<Enter>
+"nmap <silent> <F6> :set lines=999 columns=999<Enter>
 nmap Ç :
 cmap <C-e> <C-r>=expand('%:p:h')<CR>/
 nmap <silent> <F7> :%s/\(<\/[^>]*>\)/\1\r/g<Enter>
