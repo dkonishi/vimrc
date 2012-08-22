@@ -18,12 +18,14 @@ set guioptions-=m
 set guioptions-=T
 set spelllang=pt_br
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+let g:ctrlp_custom_ignore = '\v[\/](\.git|\.hg|\.svn)$'
+
 ab rdb require 'ruby-debug';debugger
 
-"nmap <silent> <C-t> :CommandT<Enter>
-nmap <silent> <C-t> :CtrlP<Enter>
+nmap <silent> <leader>t :CtrlP<Enter>
+nmap <silent> <C-b> :CtrlPBuffer<Enter>
 nmap <C-h> i$<Esc>f(r f)xF$x
-nmap <silent> <F2> :BufExplorer<Enter>
 nmap <silent> <F3> :noh<Enter>
 nmap <silent> <F4> gg=G''
 nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
@@ -36,4 +38,7 @@ nmap <silent> <F8> :set wrap spell<Enter>
 augroup filetypedetect
   autocmd BufRead,BufNewFile *.prawn set filetype=ruby
 augroup END
+let g:buffergator_suppress_keymaps = 1
 
+filetype plugin on
+let g:JSLintHighlightErrorLine = 0
