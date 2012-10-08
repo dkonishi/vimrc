@@ -5,7 +5,6 @@ source ~/.vim/vimrc
 set term=gnome-256color
 colorscheme railscasts
 
-colorscheme railscasts
 set mouse=a
 set ttymouse=xterm2
 
@@ -23,13 +22,14 @@ let g:ctrlp_custom_ignore = '\v[\/](\.git|\.hg|\.svn)$'
 
 ab rdb require 'ruby-debug';debugger
 
+nmap Y y$
 nmap <silent> <leader>t :CtrlP<Enter>
 nmap <silent> <C-b> :CtrlPBuffer<Enter>
+nmap <silent> <leader>r :CtrlPClearCache<Enter>
 nmap <C-h> i$<Esc>f(r f)xF$x
 nmap <silent> <F3> :noh<Enter>
 nmap <silent> <F4> gg=G''
 nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
-"nmap <silent> <F6> :set lines=999 columns=999<Enter>
 nmap Ç :
 cmap <C-e> <C-r>=expand('%:p:h')<CR>/
 nmap <silent> <F7> :%s/\(<\/[^>]*>\)/\1\r/g<Enter>
@@ -39,6 +39,14 @@ augroup filetypedetect
   autocmd BufRead,BufNewFile *.prawn set filetype=ruby
 augroup END
 let g:buffergator_suppress_keymaps = 1
+
+cab W w
+cab Q q
+cab wQ wq
+cab Wq wq
+cab WQ wq
+cab TAbnew tabnew
+cab Tabnew tabnew
 
 filetype plugin on
 let g:JSLintHighlightErrorLine = 0
