@@ -20,7 +20,7 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 let g:ctrlp_custom_ignore = '\v[\/](\.git|\.hg|\.svn)$'
 
-ab rdb require 'ruby-debug';debugger
+ab rdb require 'debugger';debugger
 
 nmap Y y$
 nmap <silent> <leader>t :CtrlP<Enter>
