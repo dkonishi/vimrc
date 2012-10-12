@@ -19,21 +19,14 @@ set spelllang=pt_br
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 let g:ctrlp_custom_ignore = '\v[\/](\.git|\.hg|\.svn)$'
-
+let g:tcommentMapLeaderOp1 = '<C-c>'
 ab rdb require 'debugger';debugger
 
-nmap Y y$
 nmap <silent> <leader>t :CtrlP<Enter>
 nmap <silent> <C-b> :CtrlPBuffer<Enter>
 nmap <silent> <leader>r :CtrlPClearCache<Enter>
-nmap <C-h> i$<Esc>f(r f)xF$x
-nmap <silent> <F3> :noh<Enter>
-nmap <silent> <F4> gg=G''
-nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 nmap Ç :
-cmap <C-e> <C-r>=expand('%:p:h')<CR>/
-nmap <silent> <F7> :%s/\(<\/[^>]*>\)/\1\r/g<Enter>
-nmap <silent> <F8> :set wrap spell<Enter>
+cmap <C-e> <C-r>=expand('%:p:h')<CR>/V
 
 augroup filetypedetect
   autocmd BufRead,BufNewFile *.prawn set filetype=ruby
