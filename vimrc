@@ -12,7 +12,7 @@ set ttymouse=xterm2
 set nu
 set sts=2
 set sw=2
-set guifont=monaco:h12
+set guifont=monaco:h11
 set guioptions-=m
 set guioptions-=T
 set spelllang=pt_br
