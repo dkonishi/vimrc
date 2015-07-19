@@ -26,6 +26,7 @@ ab rbb require 'byebug';byebug
 nmap <silent> <leader>t :CtrlP<Enter>
 nmap <silent> <C-b> :CtrlPBuffer<Enter>
 nmap <silent> <leader>r :CtrlPClearCache<Enter>
+nmap <silent> <leader>h :nohl<Enter>
 nmap Ç :
 cmap <C-e> <C-r>=expand('%:p:h')<CR>/V
 
