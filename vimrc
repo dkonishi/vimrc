@@ -3,7 +3,8 @@
 source ~/.vim/vimrc
 
 set term=gnome-256color
-colorscheme railscasts
+" colorscheme railscasts
+colorscheme badwolf
 
 set mouse=a
 set ttymouse=xterm2
