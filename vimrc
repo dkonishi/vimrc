@@ -24,6 +24,7 @@ let g:tcommentMapLeaderOp1 = '<C-c>'
 ab rdb require 'debugger';debugger
 ab rbb require 'byebug';byebug
 
+nmap Y y$
 nmap <silent> <leader>t :CtrlP<Enter>
 nmap <silent> <C-b> :CtrlPBuffer<Enter>
 nmap <silent> <leader>r :CtrlPClearCache<Enter>
