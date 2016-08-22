@@ -13,7 +13,7 @@ set ttymouse=xterm2
 set nu
 set sts=2
 set sw=2
-set guifont=monaco:h11
+set guifont=monaco:h10
 set guioptions-=m
 set guioptions-=T
 set spelllang=pt_br
@@ -25,7 +25,8 @@ ab rdb require 'debugger';debugger
 ab rbb require 'byebug';byebug
 
 nmap Y y$
-nmap <silent> <leader>t :CtrlP<Enter>
+" nmap <silent> <Leader>w :NERDTreeToggle<CR>
+" nmap <silent> <leader>t :CtrlP<Enter>
 nmap <silent> <C-b> :CtrlPBuffer<Enter>
 nmap <silent> <leader>r :CtrlPClearCache<Enter>
 nmap <silent> <leader>h :nohl<Enter>
@@ -47,3 +48,15 @@ cab Tabnew tabnew
 
 filetype plugin on
 let g:JSLintHighlightErrorLine = 0
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+autocmd BufRead *.clj try | silent! Require | catch /^Fireplace/ | endtry
+let g:clojure_syntax_keywords = {
+    \ 'clojureMacro': ["defproject", "defcustom"],
+    \ 'clojureFunc': ["string/join", "string/replace"]
+    \ }
+let g:clojure_fuzzy_indent = 1
+let g:clojure_fuzzy_indent_patterns = ['.']
+let g:clojure_fuzzy_indent_blacklist = []
