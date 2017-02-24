@@ -4,7 +4,8 @@ source ~/.vim/vimrc
 
 set term=gnome-256color
 " colorscheme railscasts
-colorscheme badwolf
+" colorscheme badwolf
+colorscheme spacegray
 
 set mouse=a
 set ttymouse=xterm2
@@ -47,6 +48,9 @@ cab TAbnew tabnew
 cab Tabnew tabnew
 
 filetype plugin on
+
+let g:syntastic_python_checkers = ['flake8', 'pep8']
+
 let g:JSLintHighlightErrorLine = 0
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
